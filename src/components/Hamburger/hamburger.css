@@ -1,0 +1,46 @@
+.menu-button {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.menu {
+  background-color: antiquewhite;
+  padding: 10rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  margin-top:-5rem
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 15px 0;
+  cursor: pointer;
+}

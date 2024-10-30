@@ -1,0 +1,13 @@
+.about-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about {
+    margin-top: 10rem;
+    width: 80%;
+    grid-template-columns: 60% 40%;
+    padding: 1rem;
+}

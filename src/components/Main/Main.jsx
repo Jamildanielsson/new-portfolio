@@ -3,6 +3,7 @@ import profile from "../../assets/profile.png"
 import { IoIosArrowDown } from "react-icons/io";
 
 
+
 const Main = () => {
   return (
     <div>
@@ -23,6 +24,7 @@ const Main = () => {
         <IoIosArrowDown />
         </div>
         </div>
+        
   )
 }
 

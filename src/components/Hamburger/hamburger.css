@@ -3,11 +3,12 @@
   font-weight: 800;
   margin: 1rem;
   cursor: pointer;
+  z-index: 1100; /* Högre än andra overlay */
 }
 
 .overlay {
   position: fixed;
-  top: 3rem;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -15,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; /* Under hamburgermeny men över projekt overlay */
 }
 
 .menu {
@@ -25,7 +26,8 @@
   text-align: center;
   font-size: 50px;
   font-weight: 500;
-  margin-top:-5rem
+  margin-top:-5rem;
+  z-index: 10001;
 }
 
 .close-button {

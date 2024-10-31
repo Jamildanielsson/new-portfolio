@@ -37,12 +37,12 @@
   cursor: pointer;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.ul-list {
+  list-style: none !important;
+  padding: 0 !important;
 }
 
-li {
-  margin: 15px 0;
-  cursor: pointer;
+.overlay-list {
+  margin: 15px 0 !important;
+  cursor: pointer !important;
 }

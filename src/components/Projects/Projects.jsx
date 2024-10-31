@@ -20,10 +20,27 @@ const Projects = () => {
   };
 
   const projects = [
-    { image: weatherApp, description: 'Weather App: A cool tool to check the weather.' },
-    { image: calculatorApp, description: 'Calculator App: Use it on the go to calculate hard equations' },
-    { image: todoApp, description: 'To Do App: Makes your everyday easier.' },
-    { image: dictionaryApp, description: 'Dictionary App: Hard word? No problem.' },
+    {
+      image: weatherApp,
+      description: 'Weather App: Check the weather, an app that uses OpenWeatherAPI.',
+      tags: ['React.js', 'API', 'HTML5', 'CSS', 'Javascript'],
+      link: 'https://weather-checkcheck.netlify.app/'
+    },
+    {
+      image: calculatorApp,
+      description: 'Calculator App: Use it on the go',
+      tags: ['HTML5', 'Typescript', 'React.js']
+    },
+    {
+      image: todoApp,
+      description: 'To Do App: Makes your everyday easier.',
+      tags: ['HTML5', 'TailwindCSS', 'React.js']
+    },
+    {
+      image: dictionaryApp,
+      description: 'Dictionary App: Hard word? No problem.',
+      tags: ['React.js', 'HTML5', 'SCSS']
+    },
   ];
 
   return (
@@ -40,7 +57,15 @@ const Projects = () => {
             <img src={project.image} alt="Project image" className="project-img"/>
             {hovered === index && (
               <div className="projects-overlay">
-                {project.description}
+                <p>{project.description}</p>
+                <div className="project-tags">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span key={tagIndex} className="project-tag">{tag}</span>
+                  ))}
+                </div>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <button className="watch-live-button">Watch live</button>
+                </a>
               </div>
             )}
           </div>

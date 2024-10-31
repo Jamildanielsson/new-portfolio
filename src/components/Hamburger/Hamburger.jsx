@@ -22,10 +22,10 @@ const Hamburger = () => {
         <div className="overlay">
           <div className="menu">
             <button className="close-button" onClick={handleCloseMenu}>X</button>
-            <ul>
-              <li onClick={handleCloseMenu}>Projects</li>
-              <li onClick={handleCloseMenu}>About me</li>
-              <li onClick={handleCloseMenu}>Contact</li>
+            <ul className="ul-list">
+              <li className="overlay-list" onClick={handleCloseMenu}>Projects</li>
+              <li className="overlay-list"  onClick={handleCloseMenu}>About me</li>
+              <li className="overlay-list"  onClick={handleCloseMenu}>Contact</li>
             </ul>
           </div>
         </div>

@@ -10,7 +10,6 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 70% 30%;
-
     width: 80%;
 }
 
@@ -80,6 +79,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
@@ -90,4 +90,36 @@
   
   .project-col:hover .projects-overlay {
     opacity: 1; /* Gör overlayn synlig vid hover */
+  }
+
+  .project-tags {
+    margin-top: 1rem;
+    gap:1rem;
+  }
+
+  .project-tag {
+    background: rgb(128, 128, 128);
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin: 1rem;
+    gap: 1rem;
+  }
+
+  .watch-live-button {
+    margin-top: 2rem;
+    background-color: rgb(227, 124, 124);
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .watch-live-button:hover {
+    background-color: rgb(184, 95, 95);
+  }
+
+  .watch-live-button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }

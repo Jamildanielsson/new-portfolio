@@ -6,8 +6,79 @@
 }
 
 .about {
+    display: grid;
     margin-top: 10rem;
     width: 80%;
     grid-template-columns: 60% 40%;
     padding: 1rem;
+}
+
+.about-col-1 {
+    grid-column: 1;
+}
+
+.about-col-2 {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-col-3 {
+    grid-column: span 2;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-col-4 {
+    grid-column: span 2;
+    height: 100vh;
+    max-width: 80%;
+}
+
+
+.image-boxy {
+    width: 70%;
+    border-radius: 12px;
+
+}
+
+.skills-headline {
+    margin: 1rem;
+}
+
+.skills-list {
+
+    display: flex;
+    font-size: 20px;
+    flex-wrap: wrap; /* Tillåt att element kan gå till nästa rad */
+    justify-content: center; /* Centrera elementen */
+    padding: 0; /* Ta bort padding */
+    list-style-type: none;
+}
+
+.icons {
+    font-size: 50px;
+}
+
+.icons-list {
+    flex: 1 0 20%; /* Gör så att varje li tar upp 20% av bredden, så 5 i rad */
+    max-width: 20%; /* Sätt max-bredd till 20% */
+    padding: 1rem; /* Justera padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Inkludera padding i bredd */
+}
+
+.skills-icons {
+    width: 100%;
+
 }

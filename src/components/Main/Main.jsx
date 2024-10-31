@@ -1,5 +1,6 @@
 import "./main.css"
-import profile from "../../assets/profile.png"
+import emoji from "../../assets/emoji.png"
+
 import { IoIosArrowDown } from "react-icons/io";
 
 
@@ -16,7 +17,7 @@ const Main = () => {
         <p>Well.. I try to be, most of the time. But Im really passionate about it.</p>
       </div>
       <div className="image-container">
-      <img src={profile} className="image-control" alt="Profile picture" />
+      <img src={emoji} className="image-control" alt="Profile picture" />
       </div>
     </div>
     </div>

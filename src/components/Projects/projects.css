@@ -1,5 +1,4 @@
 .projects-wrapper {
-    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -11,6 +10,16 @@
     gap: 1rem;
     grid-template-columns: 70% 30%;
     width: 80%;
+}
+
+@media (max-width: 600px) {
+  .projects-list {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1 100%; /* Gör så att varje li tar upp 33.33% av bredden, så 3 i rad */
+    max-width: 100%; /* Sätt max-bredd till 33.33% */
+  }
 }
 
 .projects-headline {

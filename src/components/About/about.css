@@ -1,73 +1,66 @@
 .about-wrapper {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .about {
-    display: grid;
-    margin-top: 10rem;
-    width: 80%;
-    grid-template-columns: 60% 40%;
-    padding: 1rem;
+  display: grid;
+  margin-top: 10rem;
+  width: 80%;
+  grid-template-columns: 60% 40%;
+  padding: 1rem;
 }
 
 .about-col-1 {
-    grid-column: 1;
+  grid-column: 1;
 }
 
 .about-col-2 {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-col-3 {
-    grid-column: span 2;
-    height: 100vh;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  grid-column: span 2;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .about-col-4 {
-    grid-column: span 2;
-    height: 100vh;
-    max-width: 80%;
+  grid-column: span 2;
+  height: 100vh;
+  max-width: 80%;
 }
-
 
 .image-boxy {
-    width: 70%;
-    border-radius: 12px;
-
+  width: 70%;
+  border-radius: 12px;
 }
 
+
+
 .skills-headline {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .skills-list {
-
     display: flex;
     font-size: 20px;
     flex-wrap: wrap; /* Tillåt att element kan gå till nästa rad */
     justify-content: center; /* Centrera elementen */
     padding: 0; /* Ta bort padding */
     list-style-type: none;
-}
-
-.icons {
-    font-size: 50px;
-}
-
-.icons-list {
+  }
+  
+  .icons-list {
     flex: 1 0 20%; /* Gör så att varje li tar upp 20% av bredden, så 5 i rad */
     max-width: 20%; /* Sätt max-bredd till 20% */
     padding: 1rem; /* Justera padding */
@@ -76,9 +69,33 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box; /* Inkludera padding i bredd */
+  }
+  
+  @media (max-width: 600px) {
+    .icons-list {
+      flex: 1 0 33.33%; /* Gör så att varje li tar upp 33.33% av bredden, så 3 i rad */
+      max-width: 33.33%; /* Sätt max-bredd till 33.33% */
+    }
+
+    .image-boxy {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .icons-list {
+        font-size: 15px;
+
+      }
+  }
+
+.icons {
+  font-size: 50px;
 }
 
 .skills-icons {
-    width: 100%;
-
+  width: 100%;
 }

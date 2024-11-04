@@ -22,7 +22,7 @@ const Main = () => {
     </div>
     </div>
         <div className="arrow-down">
-        <IoIosArrowDown />
+        <IoIosArrowDown id="projects" />
         </div>
         </div>
         

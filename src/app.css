@@ -2,3 +2,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth; /* Gör scrollningen smidig */
+  }
+
+  a::after {
+    color: black;
+  }
+
+  a:visited {
+    color: black;
+  }
+
+  a:hover {
+color: rgb(238, 161, 161);
+  }

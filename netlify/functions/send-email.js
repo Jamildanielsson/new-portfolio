@@ -1,10 +1,10 @@
-import axios from 'axios'; // Importera axios direkt
+import axios from 'axios';
 
-const service_id = import.meta.env.VITE_SERVICE_ID; // Netlify environment variables börjar med VITE_ när du använder Vite
+const service_id = import.meta.env.SERVICE_ID;
 const public_key = import.meta.env.VITE_PUBLIC_KEY;
 const template = 'template_64f64kb';
 
-export const handler = async (event, context) => {
+export async function handler(event, context) {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -12,23 +12,20 @@ export const handler = async (event, context) => {
     };
   }
 
-  let responseBody;
+  const { name, email, message } = JSON.parse(event.body);
+
+  if (!name || !email || !message) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ message: 'Alla fält är obligatoriska' }),
+    };
+  }
 
   try {
-    const { name, email, message } = JSON.parse(event.body);
-
-    if (!name || !email || !message) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ message: 'Alla fält är obligatoriska' }),
-      };
-    }
-
-    // Skicka e-post via EmailJS
     const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', {
-      service_id: service_id,    // Din tjänst-ID från EmailJS
-      template_id: template,     // Din mall-ID från EmailJS
-      user_id: public_key,       // Din användar-ID från EmailJS
+      service_id: service_id,
+      template_id: template,
+      user_id: public_key,
       template_params: {
         name: name,
         email: email,
@@ -36,28 +33,16 @@ export const handler = async (event, context) => {
       },
     });
 
-    responseBody = {
-      message: 'E-post skickat!',
-      success: true,
-      response: response.data,
-    };
-
     return {
       statusCode: 200,
-      body: JSON.stringify(responseBody),
+      body: JSON.stringify({ message: 'E-post skickat!' }),
     };
   } catch (error) {
-    console.error('Fel vid e-postsändning:', error); // Logga fel på servern för felsökning
-
-    responseBody = {
-      message: 'Något gick fel vid e-postsändning',
-      success: false,
-      error: error.message,
-    };
+    console.error('Fel vid e-postsändning:', error);
 
     return {
       statusCode: 500,
-      body: JSON.stringify(responseBody),
+      body: JSON.stringify({ message: 'Något gick fel vid e-postsändning' }),
     };
   }
 };

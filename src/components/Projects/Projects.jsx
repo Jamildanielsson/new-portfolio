@@ -27,6 +27,7 @@ const Projects = () => {
       image: calculatorApp,
       description: "Calculator App: Use it on the go",
       tags: ["HTML5", "Typescript", "React.js"],
+      link: "https://calculator-copy.netlify.app/"
     },
     {
       image: todoApp,

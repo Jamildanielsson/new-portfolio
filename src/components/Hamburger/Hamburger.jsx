@@ -7,7 +7,6 @@ const Hamburger = () => {
 
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log('öppnar menyn');
   };
 
   const handleCloseMenu = () => {

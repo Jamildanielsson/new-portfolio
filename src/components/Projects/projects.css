@@ -17,8 +17,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex: 1 100%; /* Gör så att varje li tar upp 33.33% av bredden, så 3 i rad */
-    max-width: 100%; /* Sätt max-bredd till 33.33% */
+    flex: 1 100%;
+    max-width: 100%;
   }
 
   .project-tag {
@@ -89,7 +89,7 @@
 }
 
 .projects-overlay {
-  position: absolute; /* Gör overlayn för projekten absolut */
+  position: absolute; 
   top: 0;
   left: 0;
   right: 0;
@@ -103,11 +103,11 @@
   font-size: 1.2rem;
   opacity: 0;
   transition: opacity 0.3s;
-  z-index: 1; /* Se till att den är under menyn men över project col */
+  z-index: 1; 
 }
 
 .project-col:hover .projects-overlay {
-  opacity: 1; /* Gör overlayn synlig vid hover */
+  opacity: 1; 
 }
 
 .project-tags {

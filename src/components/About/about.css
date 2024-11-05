@@ -54,27 +54,27 @@
 .skills-list {
     display: flex;
     font-size: 20px;
-    flex-wrap: wrap; /* Tillåt att element kan gå till nästa rad */
-    justify-content: center; /* Centrera elementen */
-    padding: 0; /* Ta bort padding */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 0;
     list-style-type: none;
   }
   
   .icons-list {
-    flex: 1 0 20%; /* Gör så att varje li tar upp 20% av bredden, så 5 i rad */
-    max-width: 20%; /* Sätt max-bredd till 20% */
-    padding: 1rem; /* Justera padding */
+    flex: 1 0 20%; 
+    max-width: 20%; 
+    padding: 1rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box; /* Inkludera padding i bredd */
+    box-sizing: border-box; 
   }
   
   @media (max-width: 600px) {
     .icons-list {
-      flex: 1 0 33.33%; /* Gör så att varje li tar upp 33.33% av bredden, så 3 i rad */
-      max-width: 33.33%; /* Sätt max-bredd till 33.33% */
+      flex: 1 0 33.33%; 
+      max-width: 33.33%; 
     }
 
     .image-boxy {

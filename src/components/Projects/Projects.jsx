@@ -10,12 +10,10 @@ const Projects = () => {
 
   const handleMouseEnter = (index) => {
     setHovered(index);
-    console.log("hovrar över");
   };
 
   const handleMouseLeave = () => {
     setHovered(null);
-    console.log("slutar hovra");
   };
 
   const projects = [

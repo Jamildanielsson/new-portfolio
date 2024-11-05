@@ -32,7 +32,7 @@
     grid-column: 1;
     background-color: rgb(221, 185, 255);
     border-radius: 12px;
-    padding: 1rem;
+    padding: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@
     grid-column: 2;
     background-color: rgb(234, 255, 178);
     border-radius: 12px;
-    padding: 1rem;
+    padding: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +52,7 @@
     grid-column: 1;
     background-color: rgb(237, 207, 136);
     border-radius: 12px;
-    padding: 1rem;
+    padding: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@
     grid-column: 2;
     background-color: rgb(144, 216, 250);
     border-radius: 12px;
-    padding: 1rem;
+    padding: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;

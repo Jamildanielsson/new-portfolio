@@ -33,7 +33,7 @@ const Contact = () => {
 
     try {
       // Skicka formulärdata till Netlify Function
-      const response = await fetch(`${window.location.origin}/netlify/functions/send-email`, {
+      const response = await fetch(`/.netlify/functions/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

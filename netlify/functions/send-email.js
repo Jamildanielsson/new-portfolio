@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+const SERVICEID = import.meta.env.SERVICE_ID;
+const TEMPLATE = import.meta.env.TEMPLATE;
+const PUBLICKEY = import.meta.env.PUBLIC_KEY
+
+
 export async function handler(event, context) {
-  // Kontrollera att metoden är POST
+
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -23,9 +28,9 @@ export async function handler(event, context) {
     const response = await axios.post(
       'https://api.emailjs.com/api/v1.0/email/send',
       {
-        service_id: import.meta.env.VITE_SERVICE_ID, // Din tjänst-ID från miljövariabler
-        template_id: 'template_64f64kb', // Din mall-ID
-        user_id: import.meta.env.VITE_PUBLIC_KEY, // Din användar-ID från miljövariabler
+        service_id: SERVICEID,
+        template_id: TEMPLATE, 
+        user_id: PUBLICKEY, 
         template_params: {
           name: name,
           email: email,

@@ -29,31 +29,34 @@
 }
 
 input {
-  margin: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid rgb(135, 88, 88);
+  border-radius: 6px;
+  border: 2px solid rgb(221, 130, 130);
 }
 .contact-input {
-  padding: 0.5rem 1rem;
+  padding:0.5rem;
+  width: 90%;
 }
 
 .contact-input-message {
   padding: 0.5rem 1rem;
   height: 10rem;
+  
 }
 
 .send-button {
   border: none;
   outline: none;
   background-color: azure;
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 0.7rem 1.2rem;
   width: 10rem;
-  margin: 0.5rem;
+  box-shadow: 0 0 10px #666;
+  transition: .5s;
 }
 
 .send-button:hover {
   background-color: rgb(149, 186, 186);
+  box-shadow: none;
 }
 
 .send-button:active {
@@ -68,4 +71,44 @@ input {
   padding: 1rem;
   margin: 1rem;
   font-size: 1.5rem;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+
+
+form .textarea-field .item {
+  resize: none;
+  width: 90%;
+  border-radius: 6px;
+  padding: 0.5rem;
+  border: 2px solid rgb(221, 130, 130);
+}
+
+.field .error-text {
+  font-size: 14px;
+  color: red;
+  text-align: left;
+  margin-bottom: 15px;
+  display: none;
+}
+
+
+.status-message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
 }

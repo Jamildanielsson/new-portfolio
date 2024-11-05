@@ -1,17 +1,20 @@
 import { useState } from "react";
+import emailjs from "emailjs-com"; // Importera EmailJS SDK
 import "./contact.css";
 
 const Contact = () => {
-  // State för att lagra formulärdata och status
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  const template = import.meta.env.VITE_TEMPLATE;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const [status, setStatus] = useState(null); // För att visa statusmeddelanden
+  const [status, setStatus] = useState(null);
 
-  // Funktion för att uppdatera state när formulärfält ändras
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -20,42 +23,31 @@ const Contact = () => {
     }));
   };
 
-  // Funktion för att hantera formulärens "submit"-event
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     const { name, email, message } = formData;
 
     if (!name || !email || !message) {
-      setStatus({ type: "error", message: "Alla fält är obligatoriska" });
+      setStatus({ type: "error", message: "All fields are required" });
       return;
     }
 
     try {
-      // Skicka formulärdata till Netlify Function
-      const response = await fetch(`/.netlify/functions/send-email`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
+      // eslint-disable-next-line no-unused-vars
+      const response = await emailjs.send(
+        serviceId,
+        template,
+        formData,
+        publicKey
+      );
 
-      const result = await response.json();
-
-      if (response.ok) {
-        setStatus({ type: "success", message: "E-post skickat!" });
-        setFormData({ name: "", email: "", message: "" }); // Töm formuläret
-      } else {
-        setStatus({
-          type: "error",
-          message: result.message || "Fel vid e-postsändning",
-        });
-      }
+      setStatus({ type: "success", message: "E-mail sent!" });
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.log("Failed to send message:", error);
       setStatus({
         type: "error",
-        message: "Något gick fel vid e-postsändning",
+        message: "Something went wrong when trying to send message",
       });
     }
   };
@@ -75,14 +67,14 @@ const Contact = () => {
         </div>
 
         <div className="contact-column-2">
-          {/* Formulär */}
           <form id="contact-form" onSubmit={handleSubmit}>
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Ditt namn"
+              placeholder="Your Full Name"
               value={formData.name}
+              className="contact-input"
               onChange={handleChange}
               required
             />
@@ -90,7 +82,8 @@ const Contact = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="Din e-postadress"
+              placeholder="Your Email Adress"
+              className="contact-input"
               value={formData.email}
               onChange={handleChange}
               required
@@ -98,15 +91,16 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              placeholder="Ditt meddelande"
+              placeholder="Your message"
+              className="contact-input-message"
               value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit">Skicka</button>
+            <button type="submit" className="send-button">
+              Send message
+            </button>
           </form>
-
-          {/* Statusmeddelanden */}
           {status && (
             <div className={`status-message ${status.type}`}>
               {status.message}

@@ -33,14 +33,15 @@ input {
   border: 2px solid rgb(221, 130, 130);
 }
 .contact-input {
-  padding:0.5rem;
+  padding: 0.5rem;
   width: 90%;
+  margin-bottom: 5px;
 }
 
 .contact-input-message {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   height: 10rem;
-  
+  width: 90%;
 }
 
 .send-button {
@@ -51,7 +52,7 @@ input {
   padding: 0.7rem 1.2rem;
   width: 10rem;
   box-shadow: 0 0 10px #666;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .send-button:hover {
@@ -73,29 +74,8 @@ input {
   font-size: 1.5rem;
 }
 
-.item {
-  margin-bottom: 1rem;
-}
-
-
-form .textarea-field .item {
-  resize: none;
-  width: 90%;
-  border-radius: 6px;
-  padding: 0.5rem;
-  border: 2px solid rgb(221, 130, 130);
-}
-
-.field .error-text {
-  font-size: 14px;
-  color: red;
-  text-align: left;
-  margin-bottom: 15px;
-  display: none;
-}
-
-
 .status-message {
+  width: 40%;
   margin-top: 20px;
   padding: 10px;
   border-radius: 5px;
@@ -111,4 +91,19 @@ form .textarea-field .item {
 .status-message.error {
   background-color: #f8d7da;
   color: #721c24;
+}
+
+@media (max-width: 600px) {
+  .status-message {
+    width: 90%;
+  }
+  .contact-input {
+    width: 100%;
+  }
+  .contact-input-message {
+    width: 100%;
+  }
+  .send-button {
+    margin: 5px;
+  }
 }

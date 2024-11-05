@@ -45,6 +45,7 @@ input {
 }
 
 .send-button {
+  color: black;
   border: none;
   outline: none;
   background-color: azure;
@@ -58,11 +59,13 @@ input {
 .send-button:hover {
   background-color: rgb(149, 186, 186);
   box-shadow: none;
+  color: black;
 }
 
 .send-button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+  color: black;
 }
 
 .contact-row-2 {

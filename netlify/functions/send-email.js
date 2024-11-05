@@ -1,10 +1,7 @@
 import axios from 'axios';
 
-const service_id = import.meta.env.SERVICE_ID;
-const public_key = import.meta.env.VITE_PUBLIC_KEY;
-const template = 'template_64f64kb';
-
 export async function handler(event, context) {
+  // Kontrollera att metoden är POST
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -22,16 +19,20 @@ export async function handler(event, context) {
   }
 
   try {
-    const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', {
-      service_id: service_id,
-      template_id: template,
-      user_id: public_key,
-      template_params: {
-        name: name,
-        email: email,
-        message: message,
-      },
-    });
+    // Skicka e-post via EmailJS
+    const response = await axios.post(
+      'https://api.emailjs.com/api/v1.0/email/send',
+      {
+        service_id: import.meta.env.VITE_SERVICE_ID, // Din tjänst-ID från miljövariabler
+        template_id: 'template_64f64kb', // Din mall-ID
+        user_id: import.meta.env.VITE_PUBLIC_KEY, // Din användar-ID från miljövariabler
+        template_params: {
+          name: name,
+          email: email,
+          message: message,
+        },
+      }
+    );
 
     return {
       statusCode: 200,
@@ -39,10 +40,9 @@ export async function handler(event, context) {
     };
   } catch (error) {
     console.error('Fel vid e-postsändning:', error);
-
     return {
       statusCode: 500,
       body: JSON.stringify({ message: 'Något gick fel vid e-postsändning' }),
     };
   }
-};
+}

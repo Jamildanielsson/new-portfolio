@@ -20,6 +20,16 @@
     flex: 1 100%; /* Gör så att varje li tar upp 33.33% av bredden, så 3 i rad */
     max-width: 100%; /* Sätt max-bredd till 33.33% */
   }
+
+.project-tag {
+  margin: 0px;
+  font-size: small;
+}
+
+.project-desc {
+ font-size: 14px   
+}
+
 }
 
 .projects-headline {
@@ -106,11 +116,13 @@
     gap:1rem;
   }
 
+
+
   .project-tag {
     background: rgb(128, 128, 128);
     border-radius: 12px;
     padding: 0.5rem;
-    margin: 1rem;
+    margin: 0.5rem;
     gap: 1rem;
   }
 
@@ -132,3 +144,4 @@
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+

@@ -22,7 +22,7 @@ const Projects = () => {
   const projects = [
     {
       image: weatherApp,
-      description: 'Weather App: Check the weather, an app that uses OpenWeatherAPI.',
+      description: 'Weather App: An app that uses OpenWeatherAPI.',
       tags: ['React.js', 'API', 'HTML5', 'CSS', 'Javascript'],
       link: 'https://weather-checkcheck.netlify.app/'
     },
@@ -57,7 +57,7 @@ const Projects = () => {
             <img src={project.image} alt="Project image" className="project-img"/>
             {hovered === index && (
               <div className="projects-overlay">
-                <p>{project.description}</p>
+                <p className="project-desc">{project.description}</p>
                 <div className="project-tags">
                   {project.tags.map((tag, tagIndex) => (
                     <span key={tagIndex} className="project-tag">{tag}</span>

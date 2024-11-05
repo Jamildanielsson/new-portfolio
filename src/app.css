@@ -7,6 +7,10 @@ html {
     scroll-behavior: smooth; /* Gör scrollningen smidig */
   }
 
+  a {
+    color: black !important;
+  }
+
   a::after {
     color: black;
   }

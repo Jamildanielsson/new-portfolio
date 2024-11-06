@@ -32,7 +32,8 @@ const Projects = () => {
     {
       image: todoApp,
       description: "To Do App: Makes your everyday easier.",
-      tags: ["HTML5", "TailwindCSS", "React.js"],
+      tags: ["HTML5", "Typescript", "React.js"],
+      link: 'https://what-you-need-to-do-app.netlify.app/'
     },
     {
       image: dictionaryApp,

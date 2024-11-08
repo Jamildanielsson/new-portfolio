@@ -38,7 +38,8 @@ const Projects = () => {
     {
       image: dictionaryApp,
       description: "Dictionary App: Hard word? No problem.",
-      tags: ["React.js", "HTML5", "SCSS"],
+      tags: ["React.js", "Typescript", "API", "SCSS"],
+      link: 'https://dictionary-lexiword.netlify.app/'
     },
   ];
 

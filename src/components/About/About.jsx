@@ -21,15 +21,15 @@ const About = () => {
 
           <br></br>
           <p>
-            Hello everybody! A big thank you for reaching this far! Im a tech
-            entusiast, a problem-solving nerd with freakish design-interest. My
+            Hello everybody! A big thank you for reaching this far! I'm a tech
+            entusiast, a problem-solving supernerd with a freakish design-interest. My
             name is Jamil Danielsson and I am a developer mainly within the
             frontend-area but looking to expand my competences into becoming a
             fullstack developer. I graduated as a Frontend Developer from
             Jensen’s Higher Vocational School in June 2024.
             <br></br>
             <br></br>
-            When I am not doing coding or solving problems, I do and have been
+            When I am not doing code or solving problems, I do and have been
             doing skateboarding for over 25 years and some years even
             professionally traveling the world to create articles, interviews,
             photography and videography. I love videogames, comics and tv-shows!

@@ -12,9 +12,10 @@ const Main = () => {
     <div className="wrapper">
       <div className="welcome">
         <h1>Hi there!</h1>
-        <h1> My name is Jamil Danielsson and Im a developer.</h1>
         <br></br>
-        <p>Well.. I try to be, most of the time. But Im really passionate about it.</p>
+        <h1> My name is Jamil Danielsson and I'm a developer.</h1>
+        <br></br>
+
       </div>
       <div className="image-container">
       <img src={emoji} className="image-control" alt="Profile picture" />

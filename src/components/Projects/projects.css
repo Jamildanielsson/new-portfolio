@@ -28,6 +28,7 @@
 
   .project-desc {
     font-size: 14px;
+    text-align: center;
   }
 }
 
@@ -39,7 +40,7 @@
 
 .project-col-1 {
   grid-column: 1;
-  background-color: rgb(221, 185, 255);
+  background-color: rgb(152, 117, 186);
   border-radius: 12px;
   padding: 5rem;
   display: flex;
@@ -49,7 +50,7 @@
 
 .project-col-2 {
   grid-column: 2;
-  background-color: rgb(234, 255, 178);
+  background-color: rgb(176, 191, 134);
   border-radius: 12px;
   padding: 5rem;
   display: flex;
@@ -70,6 +71,26 @@
 .project-col-4 {
   grid-column: 2;
   background-color: rgb(144, 216, 250);
+  border-radius: 12px;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-col-5 {
+  grid-column: 1;
+  background-color: rgb(107, 180, 140);
+  border-radius: 12px;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-col-6 {
+  grid-column: 2;
+  background-color: rgb(250, 144, 220);
   border-radius: 12px;
   padding: 5rem;
   display: flex;

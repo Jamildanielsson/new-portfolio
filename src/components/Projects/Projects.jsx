@@ -4,6 +4,8 @@ import weatherApp from "../../assets/weather.png";
 import calculatorApp from "../../assets/calculator.png";
 import todoApp from "../../assets/todo.png";
 import dictionaryApp from "../../assets/dictionary.png";
+import pokedexApp from "../../assets/pokedex.png"
+import memoryWithCats from '../../assets/memoryWithCats.png'
 
 const Projects = () => {
   const [hovered, setHovered] = useState(null);
@@ -17,6 +19,17 @@ const Projects = () => {
   };
 
   const projects = [
+    {
+      image: pokedexApp,
+      description: "Pokedex, A library for information on the popular 90s game Pokemon",
+      tags: ["React.js", "API", "HTML5", "CSS", "Typescript"],
+      link: "https://90s-pokedex.netlify.app/",
+    },{
+      image: memoryWithCats,
+      description: "A memory game with cute cats",
+      tags: ["Styled components", "Typescript"],
+      link: "https://memorywithcats.netlify.app/",
+    },
     {
       image: weatherApp,
       description: "Weather App: An app that uses OpenWeatherAPI.",

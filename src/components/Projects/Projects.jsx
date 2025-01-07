@@ -21,7 +21,8 @@ const Projects = () => {
   const projects = [
     {
       image: pokedexApp,
-      description: "Pokedex, A library for information on the popular 90s game Pokemon",
+      description:
+        "Pokedex: A library of information on the popular 90s game Pokemon",
       tags: ["React.js", "API", "HTML5", "CSS", "Typescript"],
       link: "https://90s-pokedex.netlify.app/",
     },
@@ -51,19 +52,19 @@ const Projects = () => {
     },
     {
       image: dictionaryApp,
-      description: "Dictionary App: Hard word? No problem.",
-      tags: ["React.js", "Typescript", "API", "SCSS"],
+      description: "Dictionary: Learn new words.",
+      tags: ["Typescript", "API", "SCSS"],
       link: "https://dictionary-lexiword.netlify.app/",
     },
   ];
 
   const colors = [
-    "rgb(152, 117, 186)", // Color 1
-    "rgb(176, 191, 134)", // Color 2
-    "rgb(237, 207, 136)", // Color 3
-    "rgb(144, 216, 250)", // Color 4
-    "rgb(107, 180, 140)", // Color 5
-    "rgb(250, 144, 220)", // Color 6
+    "rgb(152, 117, 186, 0.2)", // Color 1
+    "rgb(176, 191, 134, 0.2)", // Color 2
+    "rgb(237, 207, 136, 0.2)", // Color 3
+    "rgb(144, 216, 250, 0.2)", // Color 4
+    "rgb(107, 180, 140, 0.2)", // Color 5
+    "rgb(250, 144, 220, 0.2)", // Color 6
   ];
 
   return (

@@ -18,7 +18,7 @@ const Hamburger = () => {
     if (chapterElement) {
       chapterElement.scrollIntoView({ behavior: 'smooth' });
     }
-    handleCloseMenu(); // Stänger menyn efter klick
+    handleCloseMenu(); 
   };
 
   return (

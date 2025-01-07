@@ -4,8 +4,8 @@ import weatherApp from "../../assets/weather.png";
 import calculatorApp from "../../assets/calculator.png";
 import todoApp from "../../assets/todo.png";
 import dictionaryApp from "../../assets/dictionary.png";
-import pokedexApp from "../../assets/pokedex.png"
-import memoryWithCats from '../../assets/memoryWithCats.png'
+import pokedexApp from "../../assets/pokedex.png";
+import memoryWithCats from "../../assets/memoryWithCats.png";
 
 const Projects = () => {
   const [hovered, setHovered] = useState(null);
@@ -24,7 +24,8 @@ const Projects = () => {
       description: "Pokedex, A library for information on the popular 90s game Pokemon",
       tags: ["React.js", "API", "HTML5", "CSS", "Typescript"],
       link: "https://90s-pokedex.netlify.app/",
-    },{
+    },
+    {
       image: memoryWithCats,
       description: "A memory game with cute cats",
       tags: ["Styled components", "Typescript"],
@@ -40,20 +41,29 @@ const Projects = () => {
       image: calculatorApp,
       description: "Calculator App: Use it on the go",
       tags: ["HTML5", "Typescript", "React.js"],
-      link: "https://calculator-copy.netlify.app/"
+      link: "https://calculator-copy.netlify.app/",
     },
     {
       image: todoApp,
       description: "To Do App: Makes your everyday easier.",
       tags: ["HTML5", "Typescript", "React.js"],
-      link: 'https://what-you-need-to-do-app.netlify.app/'
+      link: "https://what-you-need-to-do-app.netlify.app/",
     },
     {
       image: dictionaryApp,
       description: "Dictionary App: Hard word? No problem.",
       tags: ["React.js", "Typescript", "API", "SCSS"],
-      link: 'https://dictionary-lexiword.netlify.app/'
+      link: "https://dictionary-lexiword.netlify.app/",
     },
+  ];
+
+  const colors = [
+    "rgb(152, 117, 186)", // Color 1
+    "rgb(176, 191, 134)", // Color 2
+    "rgb(237, 207, 136)", // Color 3
+    "rgb(144, 216, 250)", // Color 4
+    "rgb(107, 180, 140)", // Color 5
+    "rgb(250, 144, 220)", // Color 6
   ];
 
   return (
@@ -65,7 +75,12 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`project-col project-col-${index + 1}`}
+            className={`project-col ${
+              index % 2 === 0 ? "project-col-left" : "project-col-right"
+            }`}
+            style={{
+              backgroundColor: colors[index % colors.length],
+            }}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >

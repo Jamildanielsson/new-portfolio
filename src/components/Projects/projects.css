@@ -12,6 +12,46 @@
   width: 80%;
 }
 
+
+
+.project-col {
+  border-radius: 12px;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-col-left {
+  grid-column: 1;
+}
+
+.project-col-right {
+  grid-column: 2;
+}
+
+.project-col-left {
+  grid-column: 1;
+  background-color: rgb(152, 117, 186);
+  border-radius: 12px;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-col-right {
+  grid-column: 2;
+  background-color: rgb(176, 191, 134);
+  border-radius: 12px;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 600px) {
   .projects-list {
     display: flex;
